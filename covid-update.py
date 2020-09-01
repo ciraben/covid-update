@@ -40,6 +40,7 @@ Print data for the past N weeks.
 '''
 
 import os
+from sys import exit
 import requests
 import datetime
 import argparse
@@ -110,12 +111,22 @@ verbosity_group.add_argument(
     action="store_true",
 )
 parser.add_argument(
+    "--version",
+    default=False,
+    help="Print covid-update version.",
+    action="store_true",
+)
+parser.add_argument(
     "--testing",
     default=False,
     help="Read data from sample2.txt instead of BCCDC.",
     action="store_true",
 )
 args = parser.parse_args()
+
+if args.version:
+    print("0.1.0")
+    exit()
 
 # get BCCDC data
 if args.testing:
@@ -127,7 +138,6 @@ else:
         'http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC_COVID19_Dashboard_Case_Details.csv'
     )
     splitting = r.text.splitlines()
-
 
 # strip metadata
 splitting.pop(0)
