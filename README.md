@@ -53,10 +53,7 @@ Print data for the past N weeks.
 ## TODO
 - [ ] add a `--histogram` option `-g`
 - [ ] add support for other provinces
-- [x] add a date format reader for both YYYY-MM-DD and MM/DD/YYYY
-- [x] add an `--all-regions` option that prints for all regions `-a`
-- [x] add a `--today` option that prints "X new case(s) today." `-t`
-- [x] add a number of `--weeks`/`--days` ago option (default all) `-w N`/`-d N`
+- [ ] restructure script for portability
 
 See [`CHANGELOG.md`](/CHANGELOG.md).
 
