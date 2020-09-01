@@ -1,0 +1,4 @@
+exclude notes.txt cron.log test.py
+global-exclude .* *.swp
+include CHANGELOG.md CODE_OF_CONDUCT.md LICENSE.md
+include covid-update.py sample*.txt

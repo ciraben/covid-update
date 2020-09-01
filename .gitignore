@@ -1,0 +1,5 @@
+*.swp
+notes.txt
+test.py
+cron.log
+.oldgit
