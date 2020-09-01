@@ -29,17 +29,13 @@ Specify a region. Defaults to Vancouver Island. Valid regions are I (Interior), 
 
 Print today's data only.
 
+--testing
+
+Read data from sample2.txt instead of BCCDC.
+
 -w N, --weeks N
 
 Print data for the past N weeks.
-
----TODO:---
-add a --histogram option -g
-
----DONE:---
-add an --all-regions option that prints for all regions -a
-add a --today option that prints "X new case(s) today." -t
-add a number of --weeks/--days ago option (default all) -w/-d N
 
 '''
 
