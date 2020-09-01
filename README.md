@@ -44,7 +44,7 @@ Print today's data only.
 
 `--testing`
 
-Read data from sample2.txt - useful for testing.
+Read data from sample2.txt instead of BCCDC.
 
 `-w N`, `--weeks N`
 

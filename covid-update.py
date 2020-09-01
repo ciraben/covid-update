@@ -116,7 +116,7 @@ verbosity_group.add_argument(
 parser.add_argument(
     "--testing",
     default=False,
-    help="Read data from sample2.txt - useful for testing.",
+    help="Read data from sample2.txt instead of BCCDC.",
     action="store_true",
 )
 args = parser.parse_args()
