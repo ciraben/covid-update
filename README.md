@@ -46,6 +46,10 @@ Print today's data only.
 
 Read data from sample2.txt instead of BCCDC.
 
+`--version`
+
+Print **covid-update** version.
+
 `-w N`, `--weeks N`
 
 Print data for the past N weeks.
@@ -65,7 +69,7 @@ If you want to contribute to this project, shoot me an email at tom.on.github@gm
 * Whenever possible while testing new features, use `--testing` to avoid frequent server requests.
 * Any optional arguments should be added via `argparse` and documented in the README and the script docstring.
 * All changes shall adhere to [PEP 8](https://www.python.org/dev/peps/pep-0008/) and [PEP 440](https://www.python.org/dev/peps/pep-0440/) specifications.
-* All changes should be documented in `CHANGELOG.md`.
+* Notable changes should be documented in `CHANGELOG.md`.
 
 This project is released with the [Contributor Covenant's](https://www.contributor-covenant.org/) [Contributor Code of Conduct](/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
