@@ -1,4 +1,5 @@
-covid-update.py Copyright 2020 Tom Van Manen
+**covid-update**
+Copyright 2020 Tom Van Manen
 
 Hippocratic License Version Number: 2.1.
 

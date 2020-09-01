@@ -7,21 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Add
-- `--testing` option to load sample.txt/sample2.txt data when testing to prevent flooding the BCCDC site with requests
+- `--testing` option to load sample2.txt to prevent flooding the BCCDC site with requests when testing new features.
 - option to print ascii histograms
 - support for other provinces
 - `--version` option
-
-## [0.2.0] - 2020-09-01
-### Added 
-
-## [0.1.1] - 2020-08-30
-### Fixed
-- date parser to read both YYYY-MM-DD and MM/DD/YYYY formats (the BCCDC flip-flops between them)
-
-## [0.1.0] - 2020-08-28
-### Added
 - `covid-update.py`, with optional arguments `-adrtw` and helpful command line hints via `-h`
-- a README in Github-Flavored Markdown to document installation, API & licensing
-- this CHANGELOG
+- a README, LICENSE & CHANGELOG
 - a couple sample data files, for testing new features.
+### Fix
+- date parser to read both YYYY-MM-DD and MM/DD/YYYY formats (the BCCDC flip-flops between them)
