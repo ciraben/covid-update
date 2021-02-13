@@ -21,6 +21,14 @@ Print data for all regions.
 
 Print data for the past N days.
 
+-h, --help
+
+Print a help message covering these options.
+
+--no-hist
+
+Don't print the histogram.
+
 -r REGION, --region REGION
 
 Specify a region. Defaults to Vancouver Island. Valid regions are I (Interior), F (Fraser), C (Vancouver Coastal), V (Vancouver Island), N (Northern).
@@ -33,13 +41,13 @@ Print today's data only.
 
 Read data from sample2.txt instead of BCCDC.
 
+--version
+
+Print covid-update version.
+
 -w N, --weeks N
 
 Print data for the past N weeks.
-
---hist
-
-Print a histogram of recent data.
 
 '''
 
@@ -134,7 +142,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 if args.version:
-    print("0.1.0")
+    print("0.2.0")
     exit()
 
 # get BCCDC data

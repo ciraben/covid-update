@@ -34,6 +34,10 @@ Print data for the past N days.
 
 Print a help message covering these options.
 
+`--no-hist`
+
+Don't print the histogram.
+
 `-r REGION`, `--region REGION`
 
 Specify a region. Defaults to Vancouver Island. Valid regions are I (Interior), F (Fraser), C (Vancouver Coastal), V (Vancouver Island), N (Northern).
@@ -55,7 +59,6 @@ Print **covid-update** version.
 Print data for the past N weeks.
 
 ## TODO
-- [ ] add a `--histogram` option `-g`
 - [ ] add support for other provinces
 - [ ] restructure script for portability
 
