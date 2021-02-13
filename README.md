@@ -6,7 +6,7 @@
 Print regional COVID case data from the BCCDC.
 
 From the [BCCDC data notes](http://www.bccdc.ca/Health-Info-Site/Documents/BC_COVID-19_Disclaimer_Data_Notes.pdf):
->Case Details and Laboratory Information are updated daily Monday through Friday at 5:00 pm.
+>Case details and laboratory information are updated daily Monday through Friday at 4:30 pm.
 
 ## Installation
 
@@ -66,7 +66,7 @@ See [`CHANGELOG.md`](/CHANGELOG.md).
 
 ## Contributing
 
-If you want to contribute to this project, shoot me an email at tom.on.github@gmail.com— I'd love to hear about it.
+If you want to contribute to this project, shoot me an email at tom.on.github@gmail.com — I'd love to hear about it.
 
 #### A few guidelines:
 * Whenever possible while testing new features, use `--testing` to avoid frequent server requests.
