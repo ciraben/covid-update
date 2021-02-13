@@ -37,6 +37,10 @@ Read data from sample2.txt instead of BCCDC.
 
 Print data for the past N weeks.
 
+--hist
+
+Print a histogram of recent data.
+
 '''
 
 import os
@@ -122,6 +126,11 @@ parser.add_argument(
     help="Read data from sample2.txt instead of BCCDC.",
     action="store_true",
 )
+parser.add_argument(
+    "--no-hist",
+    help="Don't print a histogram.",
+    action="store_true",
+)
 args = parser.parse_args()
 
 if args.version:
@@ -144,9 +153,6 @@ splitting.pop(0)
 # isolate dates as splitting[x][0]
 for i in range(len(splitting)):
     splitting[i] = splitting[i].replace('"','').split(',')
-
-# for hists - use terminal_size.lines or .columns
-terminal_size = os.get_terminal_size()
 
 #     ---Notes on datetime---
 # datetime.datetime.strptime(date_string, "%Y-%m-%d")
@@ -220,4 +226,44 @@ if not args.verbose:
             )
     if today.weekday() > 4:
         print("Note: This weekend's data will be posted on Monday.")
+
+
+# for hists - use terminal_size.lines or .columns
+if not args.no_hist:
+    maxw = 150
+    maxh = 30
+    terminal_size = os.get_terminal_size()
+    maxval = max(daily_dict.values())
+    hheight = min(maxh, terminal_size[1] - 10)
+    hwidth = min(maxw, terminal_size[0] - 10)
+    xscale = 1
+    yscale = max(1, (maxval // 10 + 1) * 10 / hheight)
+    valchs = len(str(yscale * hheight))
+
+    print()
+    for row in range(hheight):
+        dat = ""
+        if row == hheight // 2 or row == 0:
+            scalelabel = str(int(((hheight - row) * yscale)))
+            dat += " " * (valchs - len(scalelabel)) + scalelabel + " |"
+        else:
+            dat += " " * (valchs) + " |"
+        for col in range(hwidth):
+            date = today - datetime.timedelta(days = hwidth - col)
+            if daily_dict[date] >= (hheight - row) * yscale:
+                dat += "O"
+            else:
+                dat += " "
+        print(dat)
+    print(" " * (valchs) + " +" + "-" * hwidth)
+
+    # bottom scale labels
+    bottom = " " * valchs + "  "
+    for col in range(hwidth):
+        date = today - datetime.timedelta(days = hwidth - col)
+        if date.day == 1:
+            bottom += date.strftime('%b')[0]
+        else:
+            bottom += " "
+    print(bottom)
 
